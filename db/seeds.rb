@@ -38,7 +38,8 @@
           title: Faker::Hipster.sentence,
           body: Faker::Hipster.paragraphs,
           user_id: User.order("RANDOM()").first[:id],
-          topic_id: Topic.order("RANDOM()").first[:id]
+          topic_id: Topic.order("RANDOM()").first[:id],
+          disease_id: Disease.order("RANDOM()").first[:id]
         })
     end
 
