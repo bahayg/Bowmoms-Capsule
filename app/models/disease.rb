@@ -1,4 +1,4 @@
 class Disease < ApplicationRecord
-    has_many :topics
-	has_many :posts, through: :topics
+    has_many :posts
+	has_many :topics, through: :posts
 end

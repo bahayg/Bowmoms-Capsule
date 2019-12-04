@@ -1,0 +1,9 @@
+<h2><%= @disease.name %> : </h2> 
+<p>Description: <%= @disease.description %></p>
+
+<h3>Select a topic to see the related posts:</h3>
+
+<%= form_for @topics do |f| %>
+<p><%= f.collection_select(:topic_id, Topic.all, :id, :name)%></p>
+<%= f.submit %>
+<% end %>

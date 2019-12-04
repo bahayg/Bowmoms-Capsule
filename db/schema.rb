@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_213559) do
+ActiveRecord::Schema.define(version: 2019_12_04_215746) do
 
   create_table "comments", force: :cascade do |t|
     t.string "text"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2019_12_03_213559) do
     t.integer "topic_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "disease_id"
   end
 
   create_table "topics", force: :cascade do |t|

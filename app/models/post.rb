@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
-    has_many :comments
 	belongs_to :user
 	belongs_to :topic
+	belongs_to :disease
+	has_many :comments
 end

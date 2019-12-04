@@ -1,0 +1,7 @@
+<h2>Welcome to BowMom's Capsule</h2>
+
+<h3>Kidney Diseases in Children</h3>
+
+<% @diseases.each do |disease| %>
+<%= link_to disease.name, disease_path(disease) %></br>
+<% end %>
