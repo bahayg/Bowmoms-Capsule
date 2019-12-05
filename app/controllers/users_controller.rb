@@ -5,14 +5,14 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.new(user_params)
-        session[:user_id] = user.id
+        @user = User.create(user_params)
+        session[:user_id] = @user.id
         redirect_to diseases_path
     end
 
     private
 
     def user_params
-        params.require(:user).permit(params(:username, :email))
+        params.require(:user).permit(:username, :email)
     end
 end

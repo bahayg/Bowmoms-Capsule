@@ -1,0 +1,5 @@
+<h2>All Comments:</h2>
+
+<% @comments.each do |comment| %>
+<%= link_to comment.text, comment_path(comment) %></br>
+<% end %>

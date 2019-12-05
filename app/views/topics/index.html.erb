@@ -1,0 +1,5 @@
+<h2>Topics:</h2>
+
+<% @topics.each do |topic| %>
+<%= link_to topic.title, post_path(topic.posts) %></br>
+<% end %>

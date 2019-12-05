@@ -1,4 +1,14 @@
 <h2><%= @disease.name %> : </h2> 
 <p>Description: <%= @disease.description %></p>
 
-<h3>Select a topic to see the related posts:</h3>
+<h3>There are <%= @disease.posts.count %> posts related to this disease:</h3>
+
+<% @disease.posts.each do |dp| %>
+    <%= link_to dp.title, post_path(dp) %></br>
+<% end %>
+
+
+<h4><%= link_to "Add a New Post!", new_post_path %></h4>
+
+
+<%= button_to "Available Posts", posts_path , :method => :get %>

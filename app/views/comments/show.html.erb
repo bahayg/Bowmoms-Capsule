@@ -1,0 +1,10 @@
+
+<p>This comment belongs to post named <strong>'<%= @comment.post.title %>'</strong></p></br> 
+
+<%= button_to "Edit comment", edit_comment_path(@comment), :method => :get %></br>
+
+
+<%= button_to "Delete comment", { action: "destroy", id: @comment.id },
+                                method: :delete, data: { confirm: "Are you sure?" } %></br>
+
+<%= button_to "Back to comments", comments_path, :method => :get %>

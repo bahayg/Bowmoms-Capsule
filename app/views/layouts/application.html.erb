@@ -5,11 +5,25 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/stylesheets/application.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </head>
+  <div class="container">
+    <h2 class="bg-info">BowMom's Capsule</h2>
+      <div class="right_menu">
+        <% if logged_in?%>
+          <%= link_to 'Create a New User', new_user_path, {class: 'item'} %>
+          <%= link_to 'Logout', logout_path, {class: 'item'} %>
+        <% end %>
+      </div>
+  </div>
 
   <body>
-    <%= yield %>
+      <div class="container">
+          <div class="jumbotron">
+              <%= yield %>
+          </div>
+      </div>
   </body>
 </html>

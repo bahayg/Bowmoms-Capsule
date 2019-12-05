@@ -1,0 +1,9 @@
+<h2>Edit Comment Form:</h2>
+
+<%= form_for @comment do |f| %>
+Text: <%= f.text_area :text %></br>
+<%= f.submit %>
+
+<% end %>
+
+<%= button_to "Available Comments", comments_path , :method => :get %>
