@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :diseases, only: [:index, :show]
   root to: "diseases#index"
 
-  get '/posts/:id/comment', to:"comments#get_post_params"
+  # get '/posts/:id/comment', to:"comments#get_post_params"
 
 
   get '/signup', to: "users#new"
