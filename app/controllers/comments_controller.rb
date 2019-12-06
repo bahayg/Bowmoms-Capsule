@@ -11,8 +11,14 @@ class CommentsController < ApplicationController
         @comment = Comment.new
     end
 
-    def create
+    # def get_post_params
+    #     @post = Post.find(params[:id])
+    # end
+
+    def create   
+        # byebug
         @comment = Comment.new(comment_params)
+        # @comment.post_id = @post.get_post_params.id
         @comment.save
         redirect_to @comment
     end

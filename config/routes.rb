@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   resources :posts
   resources :topics, only: [:index, :show]
   resources :diseases, only: [:index, :show]
+  root to: "diseases#index"
+
+  get '/posts/:id/comment', to:"comments#get_post_params"
+
 
   get '/signup', to: "users#new"
   post '/signup', to: "users#create"

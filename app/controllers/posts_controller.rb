@@ -14,12 +14,11 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params)
+        @post.user_id= session[:user_id]
         if @post.valid?
             @post.save
-            puts "success"
             redirect_to @post
         else
-            puts @post.errors.full_messages
             render :new
         end
     end

@@ -2,6 +2,9 @@
 
 <%= form_for @comment do |f| %>
 Text: <%= f.text_area :text %></br>
+
+<%= f.hidden_field :post_id, value: params %>
+
 <%= f.submit %>
 
 <% end %></br>

@@ -1,4 +1,5 @@
 class DiseasesController < ApplicationController
+  
     def index
         @diseases = Disease.all
     end
@@ -6,4 +7,5 @@ class DiseasesController < ApplicationController
     def show
         @disease = Disease.find(params[:id])
     end
+
 end

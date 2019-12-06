@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    skip_before_action :redirect_user, only:[:new, :create]
 
     def new
         @user = User.new
@@ -15,4 +16,5 @@ class UsersController < ApplicationController
     def user_params
         params.require(:user).permit(:username, :email)
     end
+
 end

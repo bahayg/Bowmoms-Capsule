@@ -1,15 +1,16 @@
 class AuthController < ApplicationController
+    skip_before_action :redirect_user
     def signin
-        session[:user_id] = @user.id
+        # session[:user_id] = @user.id
     end
 
     def verify
         @user = User.find_by(username: params[:auth][:username])
-        if @user && @user.authenticate(params[:auth][:password])
+        if @user 
             session[:user_id] = @user.id
             redirect_to diseases_path
         else 
-            flash[:message] = "Incorrect detail please try again"
+            flash[:message] = "Username is incorrect, please try again!"
             render :signin
         end
     end
@@ -22,4 +23,5 @@ class AuthController < ApplicationController
     def current_user
         @user = User.find(session[:user_id])
     end
+    
 end
