@@ -1,10 +1,18 @@
-<h2>New Comment Form:</h2>
+<h3>New Comment Form</h3>
 
 <%= form_for @comment do |f| %>
-Post: <%= f.collection_select(:post_id, Post.all, :id, :title) %></br>
-Text: <%= f.text_area :text %></br>
-
-<%= f.submit %>
-
+    </br>
+    Post: <%= f.collection_select(:post_id, Post.all, :id, :title) %></br>
+    </br>
+    Text: <%= f.text_area :text %></br>
+    </br>
+    <%= f.submit %></br>
+    </br>
 <% end %></br>
+    </br>
+<%= button_to "Available Comments", comments_path, :method => :get %></br>
+
+<%= button_to "Back to Posts", posts_path, :method => :get %></br>
+
+<%= button_to "Back to Diseases", diseases_path , :method => :get %>
 

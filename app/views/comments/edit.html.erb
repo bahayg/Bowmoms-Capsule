@@ -1,9 +1,15 @@
-<h2>Edit Comment Form:</h2>
+<h3>Edit Comment Form</h3>
 
 <%= form_for @comment do |f| %>
-Text: <%= f.text_area :text %></br>
-<%= f.submit %>
+    </br>
+    Text: <%= f.text_area :text %></br>
+    </br>
+    <%= f.submit %></br>
+    </br>
+<% end %></br>
+    </br>
+<%= button_to "Available Comments", comments_path , :method => :get %></br>
 
-<% end %>
+<%= button_to "Back to Posts", posts_path, :method => :get %></br>
 
-<%= button_to "Available Comments", comments_path , :method => :get %>
+<%= button_to "Back to Diseases", diseases_path , :method => :get %>

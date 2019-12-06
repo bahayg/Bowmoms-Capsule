@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resources :comments
   resources :posts
-  resources :topics, only: [:index, :show]
+  resources :topics, only: [:index]
   resources :diseases, only: [:index, :show]
   root to: "diseases#index"
 

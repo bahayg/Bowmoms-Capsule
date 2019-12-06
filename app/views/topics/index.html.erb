@@ -1,5 +1,8 @@
-<h2>Topics:</h2>
+<h4>Topics:</h4>
+<% @topics.each do |topic| %></br>
+    - <%= topic.title %>
+<% end %></br>
+    </br>
+<%= button_to "Back to Posts", posts_path, :method => :get %></br>
 
-<% @topics.each do |topic| %>
-<%= link_to topic.title, post_path(topic.posts) %></br>
-<% end %>
+<%= button_to "Back to Diseases", diseases_path , :method => :get %>

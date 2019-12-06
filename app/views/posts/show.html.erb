@@ -1,26 +1,27 @@
 <h2><%= @post.title %> </h2> 
-<p><%= @post.body %></p>
-
-<h5>Posted by <strong><%= @post.user.username %></strong></h5>
-Topic:<strong><%= @post.topic.title %></strong> <%= button_to "Check Other Topics", topics_path, :method => :get %>
 </br>
+<strong>Topic: </strong><%= @post.topic.title %> </br>
+<strong>Posted by: </strong><%= @post.user.username %> </br>
+</br>
+<p><%= @post.body %></p>
+</br>
+<strong>Comments: </strong></br>
+<% @post.comments.each do |pc| %></br>
+    <%= pc.text %></br>
+    </br>
+<% end %>
+    </br>
 
-<h4>Comments on this post:</h4>
-<p><% @post.comments.each do |pc| %></p>
+<%= button_to "Edit Post", edit_post_path(@post), :method => :get %></br>
 
- <%= pc.text %></br>
-<% end %></br>
-
+<%= button_to "Delete Post", { action: "destroy", id: @post.id },method: :delete %></br>
 
 <%= button_to "Add Comment", new_comment_path, :method => :get %></br>
+</br>
+</br>
+<%= button_to "Add a New Post", new_post_path , :method => :get %></br>
 
-<%= button_to "Edit post", edit_post_path(@post), :method => :get %></br>
+<%= button_to "Back to Posts", posts_path, :method => :get %></br>
 
-
-<%= button_to "Delete post", { action: "destroy", id: @post.id },
-                                method: :delete, data: { confirm: "Are you sure?" } %></br>
-
-<%= button_to "Back to posts", posts_path, :method => :get %>
-
-
+<%= button_to "Back to Diseases", diseases_path , :method => :get %>
 

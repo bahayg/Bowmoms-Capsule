@@ -1,11 +1,19 @@
-<h2>New Post Form:</h2>
+<h3>New Post Form</h3>
 
 <%= form_for @post do |f| %>
-
-Disease <%= f.collection_select(:disease_id, Disease.all, :id, :name) %></br>
-Topic: <%= f.collection_select(:topic_id, Topic.all, :id, :title) %></br>
-Title: <%= f.text_field :title %></br>
-Body: <%= f.text_area :body %></br>
-
-<%= f.submit %></br>
+    </br>
+    Disease: <%= f.collection_select(:disease_id, Disease.all, :id, :name) %></br>
+    </br>
+    Topic: <%= f.collection_select(:topic_id, Topic.all, :id, :title) %></br>
+    </br>
+    Title: <%= f.text_field :title %></br>
+    </br>
+    Body: <%= f.text_area :body %></br>
+    </br>
+    <%= f.submit %></br>
+    </br>
 <% end %></br>
+    </br>
+<%= button_to "Back to Posts", posts_path, :method => :get %></br>
+
+<%= button_to "Back to Diseases", diseases_path , :method => :get %>

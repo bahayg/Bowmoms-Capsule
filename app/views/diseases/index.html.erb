@@ -1,7 +1,11 @@
-<h2>Welcome to BowMom's Capsule</h2>
+<h2>Welcome to BowMom's Capsule group!</h2></br>
 
-<h3>Kidney Diseases in Children</h3>
-
-<% @diseases.each do |disease| %>
-<%= link_to disease.name, disease_path(disease) %></br>
-<% end %>
+<p>BowMom's Capsule is a website supports the mothers of children with chronic kidney diseases.</p>
+<p>You can select a disease and read available posts about it and please feel free to share your own experiences by writing a post.</p>
+</br>
+<h4>Kidney Diseases in Children:</h4>
+<% @diseases.each do |disease| %></br>
+    - <%= link_to disease.name, disease_path(disease) %>
+<% end %></br>
+    </br>
+<%= button_to "Add a New Post", new_post_path , :method => :get %>
