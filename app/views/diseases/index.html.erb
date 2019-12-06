@@ -4,8 +4,10 @@
 <p>You can select a disease and read available posts about it and please feel free to share your own experiences by writing a post.</p>
 </br>
 <h4>Kidney Diseases in Children:</h4>
-<% @diseases.each do |disease| %></br>
-    - <%= link_to disease.name, disease_path(disease) %>
-<% end %></br>
-    </br>
+<div class="lists">
+    <% @diseases.each do |disease| %></br>
+        - <%= link_to disease.name, disease_path(disease) %>
+    <% end %></br>
+        </br>
+</div>
 <%= button_to "Add a New Post", new_post_path , :method => :get %>

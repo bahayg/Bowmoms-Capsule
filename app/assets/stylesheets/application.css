@@ -17,5 +17,21 @@
 
 h2 {
     text-align: center;
+    color:purple;
+}
+
+.lists {
+    color:purple;
+}
+
+.right_menu {
+    background: peru;
+}
+
+.item {
     color: purple;
+}
+
+p {
+    flex-wrap: wrap;
 }
