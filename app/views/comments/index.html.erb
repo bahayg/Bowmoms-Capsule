@@ -1,9 +1,16 @@
-<h4>All Comments:</h4>
+<a href="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201603/world-kidney-day-story_647_031016032401.jpg">
+    <img src="/images/world-kidney-day.jpg" alt="World_Kidney_Day" width=480px height=300px>
+    </a>
+    </br>
 
-<% @comments.each do |comment| %></br>
-    - <%= link_to comment.text, comment_path(comment) %>
+<h4>Available Comments:</h4>
+</br>
+<ul>
+<% @comments.each do |comment| %>
+    <li><%= link_to comment.text, comment_path(comment) %></li> 
 <% end %></br>
     </br>
+</ul>
 <%= button_to "Back to Posts", posts_path, :method => :get %></br>
 
 <%= button_to "Back to Diseases", diseases_path , :method => :get %>

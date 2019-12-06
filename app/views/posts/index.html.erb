@@ -1,6 +1,15 @@
-<h4>All Posts:</h4>
-<% @posts.each do |post| %></br>
-    - <%= link_to post.title, post_path(post) %>
+<a href="https://labblog.uofmhealth.org/sites/lab/files/2018-06/michigan-med-l-nephrotic-01.jpg">
+    <img src="/images/children.jpg" alt="Children" width=480px height=300px>
+</a>
+</br>
+
+<h4>Available Posts:</h4>
+</br>
+<ul>
+<% @posts.each do |post| %>
+    <li><%= link_to post.title, post_path(post) %></li> 
 <% end %></br>
     </br>
+</ul>
+    
 <%= button_to "Back to Diseases", diseases_path , :method => :get %>
