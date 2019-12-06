@@ -1,6 +1,12 @@
-<h4>All Posts:</h4>
-<% @posts.each do |post| %></br>
-    - <%= link_to post.title, post_path(post) %>
+
+<%= image_tag("children", :alt => "rss feed", width:'480', height:'300') %>
+</br>
+<h4>Available Posts:</h4>
+</br>
+<ul>
+<% @posts.each do |post| %>
+    <li> <%= link_to post.title, post_path(post) %></li>
 <% end %></br>
     </br>
+</ul>
 <%= button_to "Back to Diseases", diseases_path , :method => :get %>

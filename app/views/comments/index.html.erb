@@ -1,9 +1,14 @@
-<h4>All Comments:</h4>
 
-<% @comments.each do |comment| %></br>
-    - <%= link_to comment.text, comment_path(comment) %>
+<%= image_tag("world-kidney-day", :alt => "rss feed", width:'480', height:'300') %>
+</br>
+<h4>Available Comments:</h4>
+</br>
+<ul>
+<% @comments.each do |comment| %>
+    <li> <%= link_to comment.text, comment_path(comment) %> </li>
 <% end %></br>
     </br>
+</ul>
 <%= button_to "Back to Posts", posts_path, :method => :get %></br>
 
 <%= button_to "Back to Diseases", diseases_path , :method => :get %>

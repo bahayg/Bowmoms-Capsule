@@ -20,18 +20,38 @@ h2 {
     color:purple;
 }
 
-.lists {
-    color:purple;
+h3, h4, h5 {
+    color: purple;
 }
 
 .right_menu {
-    background: peru;
+    background: orange;
+    text-align: right;
 }
 
 .item {
     color: purple;
+    text-decoration-line: underline;
 }
 
-p {
-    flex-wrap: wrap;
+a {
+    color: teal;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li::before {
+    content: "\2022";
+    color: orange;
+    display: inline-block;
+    width: 1em;
+}
+
+img {
+    float: right;
+    margin-bottom: 30px;
+    margin-left: 22px;
+    margin-top: 20px;
 }

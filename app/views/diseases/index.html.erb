@@ -3,11 +3,13 @@
 <p>BowMom's Capsule is a website supports the mothers of children with chronic kidney diseases.</p>
 <p>You can select a disease and read available posts about it and please feel free to share your own experiences by writing a post.</p>
 </br>
+<%= image_tag("friendship_umbrella", :alt => "rss feed", width:'480', height:'300') %>
+</br>
 <h4>Kidney Diseases in Children:</h4>
-<div class="lists">
-    <% @diseases.each do |disease| %></br>
-        - <%= link_to disease.name, disease_path(disease) %>
+<ul>
+    <% @diseases.each do |disease| %>
+        <li> <%= link_to disease.name, disease_path(disease) %></li>
     <% end %></br>
         </br>
-</div>
+    </ul>
 <%= button_to "Add a New Post", new_post_path , :method => :get %>
