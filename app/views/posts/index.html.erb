@@ -1,15 +1,28 @@
+<<<<<<< HEAD
 <a href="https://labblog.uofmhealth.org/sites/lab/files/2018-06/michigan-med-l-nephrotic-01.jpg">
     <img src="/images/children.jpg" alt="Children" width=480px height=300px>
 </a>
 </br>
 
+=======
+
+<%= image_tag("children", :alt => "rss feed", width:'480', height:'300') %>
+</br>
+>>>>>>> presented_branch
 <h4>Available Posts:</h4>
 </br>
 <ul>
 <% @posts.each do |post| %>
+<<<<<<< HEAD
     <li><%= link_to post.title, post_path(post) %></li> 
 <% end %></br>
     </br>
 </ul>
     
+=======
+    <li> <%= link_to post.title, post_path(post) %></li>
+<% end %></br>
+    </br>
+</ul>
+>>>>>>> presented_branch
 <%= button_to "Back to Diseases", diseases_path , :method => :get %>

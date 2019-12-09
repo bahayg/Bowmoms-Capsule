@@ -21,7 +21,11 @@ h2 {
 }
 
 h3, h4, h5 {
+<<<<<<< HEAD
     color:purple; 
+=======
+    color: purple;
+>>>>>>> presented_branch
 }
 
 .right_menu {
@@ -44,7 +48,11 @@ ul {
 
 ul li::before {
     content: "\2022";
+<<<<<<< HEAD
     color:orange;
+=======
+    color: orange;
+>>>>>>> presented_branch
     display: inline-block;
     width: 1em;
 }
@@ -54,4 +62,8 @@ img {
     margin-bottom: 30px;
     margin-left: 22px;
     margin-top: 20px;
+<<<<<<< HEAD
   }
+=======
+}
+>>>>>>> presented_branch
