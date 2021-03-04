@@ -6,9 +6,6 @@ Rails.application.routes.draw do
   resources :diseases, only: [:index, :show]
   root to: "diseases#index"
 
-  # get '/posts/:id/comment', to:"comments#get_post_params"
-
-
   get '/signup', to: "users#new"
   post '/signup', to: "users#create"
 
@@ -17,5 +14,10 @@ Rails.application.routes.draw do
 
   get '/logout', to: "auth#logout"
   
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
+
+
+# get '/posts/:id/comment', to:"comments#get_post_params"
+
+
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

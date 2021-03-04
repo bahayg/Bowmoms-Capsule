@@ -1,23 +1,13 @@
-<<<<<<< HEAD
 <a href="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201603/world-kidney-day-story_647_031016032401.jpg">
     <img src="/images/world-kidney-day.jpg" alt="World_Kidney_Day" width=480px height=300px>
     </a>
     </br>
 
-=======
-
-<%= image_tag("world-kidney-day", :alt => "rss feed", width:'480', height:'300') %>
-</br>
->>>>>>> presented_branch
 <h4>Available Comments:</h4>
 </br>
 <ul>
 <% @comments.each do |comment| %>
-<<<<<<< HEAD
     <li><%= link_to comment.text, comment_path(comment) %></li> 
-=======
-    <li> <%= link_to comment.text, comment_path(comment) %> </li>
->>>>>>> presented_branch
 <% end %></br>
     </br>
 </ul>

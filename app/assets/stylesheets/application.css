@@ -14,56 +14,68 @@
  *= require_self
  */
 
-
 h2 {
-    text-align: center;
-    color:purple;
+  text-align: center;
+  color: purple;
 }
 
-h3, h4, h5 {
-<<<<<<< HEAD
-    color:purple; 
-=======
-    color: purple;
->>>>>>> presented_branch
+h3,
+h4,
+h5 {
+  color: purple;
 }
 
 .right_menu {
-    background: orange;
-    text-align: right;
+  background: orange;
+  text-align: right;
 }
 
 .item {
-    color: purple;
-    text-decoration-line: underline;
+  color: purple;
+  text-decoration-line: underline;
 }
 
 a {
-    color: teal;
+  color: teal;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 ul li::before {
-    content: "\2022";
-<<<<<<< HEAD
-    color:orange;
-=======
-    color: orange;
->>>>>>> presented_branch
-    display: inline-block;
-    width: 1em;
+  content: "\2022";
+  color: orange;
+  display: inline-block;
+  width: 1em;
 }
 
 img {
-    float: right;
-    margin-bottom: 30px;
-    margin-left: 22px;
-    margin-top: 20px;
-<<<<<<< HEAD
-  }
-=======
+  float: right;
+  margin-bottom: 30px;
+  margin-left: 22px;
+  margin-top: 20px;
 }
->>>>>>> presented_branch
+
+.diseases {
+  font-size: larger;
+}
+
+/* h1 {
+     text-align: center;
+     border: 5px solid	#B22222;
+     padding: 30px;
+     margin: 10px;
+     border-radius: 20px;
+   }
+
+ .right_menu{
+     align-items: left;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 1px;
+      margin-right: 1px;
+      border: 0.5px solid darkgray;
+      border-radius: 5px;
+      padding: 10px;
+    } */

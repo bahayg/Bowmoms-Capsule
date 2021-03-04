@@ -6,10 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-    10.times do
+    20.times do
         User.create({
-            username: Faker::Name.name,
-            email: Faker::Internet.free_email
+            username: Faker::Name.name,password: "test"
         })
     end
 
@@ -33,7 +32,7 @@
         {name: 'Nephritis', description: 'This is any inflammation of the kidney. It can be caused by infection, an autoimmune disease (such as lupus), or an unknown reason. The first symptoms of nephritis usually are high levels of protein and blood in the urine.'}
     ])
 
-    10.times do 
+    30.times do 
         Post.create({
           title: Faker::Hipster.sentence,
           body: Faker::Hipster.paragraphs,
@@ -43,7 +42,7 @@
         })
     end
 
-    10.times do 
+    40.times do 
         Comment.create({
             text: Faker::Hipster.sentence,
             post_id: Post.order("RANDOM()").first[:id]
